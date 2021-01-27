@@ -1,0 +1,73 @@
+/* @import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss"; */
+body {
+  font-family: "lato", "sans-serif";
+  -webkit-font-smoothing: antialiased;
+  color: #232323;
+}
+
+nav li:last-child a {
+  background: #1e4dfe;
+}
+nav li:last-child a:hover {
+  background: #00176b;
+}
+
+nav li a:hover {
+  transition: all 0.3s ease-in-out;
+}
+nav li a:hover:hover {
+  color: #1e4dfe;
+}
+
+section.hero {
+  background: #f8f8f8;
+}
+
+.size {
+  background: #f8f8f8;
+}
+
+.add-to-cart {
+  border: 2px solid #1e4dfe;
+  color: #1e4dfe;
+  transition: all 0.3s ease-in-out;
+}
+.add-to-cart:hover {
+  background: #1e4dfe;
+  border-color: #fff;
+  color: #fff;
+}
+.add-to-cart:focus {
+  outline: none;
+}
+
+.row-gap-16 {
+  row-gap: 4rem;
+}
+
+.btn-primary {
+  background: #1e4dfe;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background: #00176b;
+}
+
+section.cart {
+  background: #f8f8f8;
+}
+section.cart .amount {
+  color: #1e4dfe;
+}
+
+section.login {
+  background: #f8f8f8;
+  min-height: calc(100vh-86px);
+}
+section.login a {
+  color: #1e4dfe;
+}
+section.login:hover {
+  color: #00176b;
+}
