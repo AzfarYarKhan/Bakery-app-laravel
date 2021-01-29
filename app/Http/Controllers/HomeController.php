@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\bakeryitems;
 
 class HomeController extends Controller
 {
        public function index(){
-        return view('pages.home');
-    
+     
+        $bakeryitems =  bakeryitems::all();
+        return view('pages.home')->with('bakeryitems', $bakeryitems);
     }
 }

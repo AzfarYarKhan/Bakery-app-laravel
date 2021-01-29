@@ -18,18 +18,20 @@
 	</div>
 </section>
 <section class="menu container mx-auto py-8">
-	<h1 class="text-xl font-bold mb-8">All Items</h1>
+	<h1 class="text-xl font-bold mb-8">All items</h1>
 	<div class="grid grid-cols-4 row-gap-16 col-gap-12">
+         	@foreach($bakeryitems as $bakeryitem)
 		<div class="w-64">
-			<img class="h-40 mb-4 mx-auto" src="/img/pastry.jpeg" alt="" />
+			<img class="h-40 mb-4 mx-auto" src="/img/{{$bakeryitem->image}}" alt="" />
 			<div class="text-center">
-				<h2 class="mb-4 text-lg">Pastry</h2>
+				<h2 class="mb-4 text-lg">{{$bakeryitem->name}}</h2>
 				<span class="size py-1 px-4 rounded-full uppercase text-xs"
-					>small
+					>{{$bakeryitem->size}}
 				</span>
 				<div class="flex items-center justify-around mt-6">
-					<span class="font-bold text-lg">500 Rs</span>
+					<span class="font-bold text-lg">RS {{$bakeryitem->price}}</span>
 					<button
+						data-item="<%= JSON.stringify(item) %>"
 						class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold"
 					>
 						<span>+</span>
@@ -38,132 +40,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="w-64">
-			<img class="h-40 mb-4 mx-auto"src="/img/pastry.jpeg"  alt="" />
-			<div class="text-center">
-				<h2 class="mb-4 text-lg">Pastry</h2>
-				<span class="size py-1 px-4 rounded-full uppercase text-xs"
-					>small
-				</span>
-				<div class="flex items-center justify-around mt-6">
-					<span class="font-bold text-lg">500 Rs</span>
-					<button
-						class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold"
-					>
-						<span>+</span>
-						<span class="ml-4">Add</span>
-					</button>
-				</div>
-			</div>
-		</div>
-		<div class="w-64">
-			<img class="h-40 mb-4 mx-auto" src="/img/pastry.jpeg" alt="" />
-			<div class="text-center">
-				<h2 class="mb-4 text-lg">Pastry</h2>
-				<span class="size py-1 px-4 rounded-full uppercase text-xs"
-					>small
-				</span>
-				<div class="flex items-center justify-around mt-6">
-					<span class="font-bold text-lg">500 Rs</span>
-					<button
-						class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold"
-					>
-						<span>+</span>
-						<span class="ml-4">Add</span>
-					</button>
-				</div>
-			</div>
-		</div>
-		<div class="w-64">
-			<img class="h-40 mb-4 mx-auto" src="/img/pastry.jpeg"  alt="" />
-			<div class="text-center">
-				<h2 class="mb-4 text-lg">Pastry</h2>
-				<span class="size py-1 px-4 rounded-full uppercase text-xs"
-					>small
-				</span>
-				<div class="flex items-center justify-around mt-6">
-					<span class="font-bold text-lg">500 Rs</span>
-					<button
-						class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold"
-					>
-						<span>+</span>
-						<span class="ml-4">Add</span>
-					</button>
-				</div>
-			</div>
-		</div>
-		<div class="w-64">
-			<img class="h-40 mb-4 mx-auto" src="/img/pastry.jpeg"  alt="" />
-			<div class="text-center">
-				<h2 class="mb-4 text-lg">Pastry</h2>
-				<span class="size py-1 px-4 rounded-full uppercase text-xs"
-					>small
-				</span>
-				<div class="flex items-center justify-around mt-6">
-					<span class="font-bold text-lg">500 Rs</span>
-					<button
-						class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold"
-					>
-						<span>+</span>
-						<span class="ml-4">Add</span>
-					</button>
-				</div>
-			</div>
-		</div>
-		<div class="w-64">
-			<img class="h-40 mb-4 mx-auto" src="/img/pastry.jpeg" alt="" />
-			<div class="text-center">
-				<h2 class="mb-4 text-lg">Pastry</h2>
-				<span class="size py-1 px-4 rounded-full uppercase text-xs"
-					>small
-				</span>
-				<div class="flex items-center justify-around mt-6">
-					<span class="font-bold text-lg">500 Rs</span>
-					<button
-						class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold"
-					>
-						<span>+</span>
-						<span class="ml-4">Add</span>
-					</button>
-				</div>
-			</div>
-		</div>
-		<div class="w-64">
-			<img class="h-40 mb-4 mx-auto" src="/img/pastry.jpeg"  alt="" />
-			<div class="text-center">
-				<h2 class="mb-4 text-lg">Pastry</h2>
-				<span class="size py-1 px-4 rounded-full uppercase text-xs"
-					>small
-				</span>
-				<div class="flex items-center justify-around mt-6">
-					<span class="font-bold text-lg">500 Rs</span>
-					<button
-						class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold"
-					>
-						<span>+</span>
-						<span class="ml-4">Add</span>
-					</button>
-				</div>
-			</div>
-		</div>
-		<div class="w-64">
-			<img class="h-40 mb-4 mx-auto" src="/img/pastry.jpeg" alt="" />
-			<div class="text-center">
-				<h2 class="mb-4 text-lg">Pastry</h2>
-				<span class="size py-1 px-4 rounded-full uppercase text-xs"
-					>small
-				</span>
-				<div class="flex items-center justify-around mt-6">
-					<span class="font-bold text-lg">500 Rs</span>
-					<button
-						class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold"
-					>
-						<span>+</span>
-						<span class="ml-4">Add</span>
-					</button>
-				</div>
-			</div>
-		</div>
+		@endforeach
 	</div>
 </section>
 @endsection
