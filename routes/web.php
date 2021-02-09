@@ -9,7 +9,10 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', 'HomeController@index');
 Route::get('/cart', 'CartController@index');
-Route::get('/login', 'AuthController@login');
-Route::get('/register', 'AuthController@register');
+Route::get('/login', 'Auth\LoginController@login');
+Route::get('/register', 'Auth\RegisterController@create');
 Route::get('/addto-cart/{id}', 'CartController@additem');
+
+
+Auth::routes();
 

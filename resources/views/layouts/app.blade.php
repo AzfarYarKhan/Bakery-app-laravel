@@ -49,7 +49,6 @@
 		  document.getElementById("cartCounter").innerHTML = count;	 
 		  
 		  const url= '/addto-cart/' + id;
-		  alert(url);
 		  axios.get(url);
 		  
       }

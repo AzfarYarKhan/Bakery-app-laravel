@@ -44,7 +44,7 @@
 				</form>
 			</div>
 			<a
-				href=""
+				href="/login"
 				class="inline-block cursor-pointer btn-primary px-6 py-2 rounded-full text-white font-bold mt-6"
 				>Login to continue
 			</a>
