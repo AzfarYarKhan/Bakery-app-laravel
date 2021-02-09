@@ -1851,20 +1851,12 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 var addToCart = document.querySelectorAll(".add-to-cart");
 var cartcounter = document.querySelector("#cartCounter");
 
-function updateCart(item) {
-  axios__WEBPACK_IMPORTED_MODULE_0___default().post("/update-cart", item).then(function (res) {
-    console.log(res);
-    cartcounter.innerText = res.data.totalQty;
-  })["catch"](function (err) {});
-}
+function updateCart(bakeryitem) {}
 
-addToCart.forEach(function (btn) {
-  btn.addEventListener("click", function (e) {
-    console.log(e);
-    var item = JSON.parse(btn.dataset.item);
-    updateCart(item);
-  });
-});
+function shoot() {
+  cartcounter.innerText += 1;
+  updateCart(bakeryitem);
+}
 
 /***/ }),
 

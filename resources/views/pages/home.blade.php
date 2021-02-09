@@ -31,7 +31,8 @@
 				<div class="flex items-center justify-around mt-6">
 					<span class="font-bold text-lg">RS {{$bakeryitem->price}}</span>
 					<button
-						data-item="<%= JSON.stringify(item) %>"
+						id="{{$bakeryitem->id}}"
+						onclick= "incrementcart(this.id)"
 						class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold"
 					>
 						<span>+</span>

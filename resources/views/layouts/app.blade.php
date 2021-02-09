@@ -29,7 +29,10 @@
 					<li class="ml-6"><a href="/register"> Register </a></li>
 					<li class="ml-6"><a href="/login"> Login </a></li>
 					<li class="ml-6">
-						<a href="/cart" class="inline-block px-4 py-2">
+						<a href="/cart" class="inline-block px-4 py-2 rounded-full flex item-center">
+						<span id="cartCounter" class="text-white font-bold pr-2">
+								0
+						</span>
 							<img src="/img/cart.png" alt="" />
 						</a>
 					</li>
@@ -38,5 +41,18 @@
 		</nav>
         @yield("content")
 		<script src="/js/app.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>		
+		
+		<script >
+      function incrementcart(id) {
+		  let count=parseInt(document.getElementById("cartCounter").innerHTML)+1;
+		  document.getElementById("cartCounter").innerHTML = count;	 
+		  
+		  const url= '/addto-cart/' + id;
+		  alert(url);
+		  axios.get(url);
+		  
+      }
+    </script>
 	</body>
 </html>

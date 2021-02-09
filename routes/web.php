@@ -11,5 +11,5 @@ Route::get('/', 'HomeController@index');
 Route::get('/cart', 'CartController@index');
 Route::get('/login', 'AuthController@login');
 Route::get('/register', 'AuthController@register');
-Route::get('/update-cart', 'CartController@update');
+Route::get('/addto-cart/{id}', 'CartController@additem');
 
